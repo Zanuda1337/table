@@ -1,0 +1,70 @@
+.filter {
+  overflow-x: auto;
+  overflow-y: hidden;
+  height: 8rem;
+  h2 {
+    font-size: 2.2rem;
+    line-height: 0;
+    font-weight: 600;
+  }
+  .buttons {
+    display: flex;
+  }
+  .button {
+    margin-left: 1rem;
+    height: 3rem;
+    svg{
+      fill: var(--table_foreground);
+      height: 1.5rem;
+      display: block;
+    }
+  }
+  .button:before {
+    width: 3.75rem;
+    height: 3.75rem;
+  }
+  .form {
+    display: flex;
+  }
+  .field {
+    display: flex;
+    flex-direction: column;
+    margin-right: 1.5rem;
+    label {
+      font-size: 1.2rem;
+      color: var(--table_foreground);
+      opacity: .7;
+      margin-left: .4rem;
+    }
+    input, select, option {
+      color: var(--table_foreground);
+      font-weight: 500;
+      height: 100%;
+    }
+    option {
+      font-size: 1.5rem;
+      font-weight: 400;
+    }
+    input::placeholder {
+      opacity: .5;
+      font-weight: 400;
+    }
+    input, select {
+      padding: .25rem 0;
+      border-bottom: 2px solid var(--separator_common);
+      transition: .3s;
+    }
+    input:focus, select:focus {
+      border-bottom: 2px solid var(--main_background_second);
+    }
+  }
+  .active {
+    svg {
+      fill: var(--main_background_second)
+    }
+  }
+  .select-property {
+    text-transform: capitalize;
+    option {text-transform: capitalize}
+  }
+}

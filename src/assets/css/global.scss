@@ -1,0 +1,69 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-size: calc(6px + 4 * (100vw / 1920));
+}
+body {
+  background: linear-gradient(
+          140deg,
+          var(--main_background_first) 0%,
+          var(--main_background_second) 100%);
+  font-family: 'Jost', sans-serif;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+:root {
+  /* ------- PALETTE ------ */
+  --white: #fff;
+  --gray: #636363;
+  --light_gray: rgb(224,224,224);
+  --pale_magenta: rgb(213, 99, 185);
+  --dark_pastel_blue: rgb(128, 161, 215);
+  --dark_pastel_blue_alpha20: rgba(128, 161, 215,.2);
+  --dark_red: rgb(220, 55, 55);
+  /* ------- THEME ------ */
+  --separator_common: var(--light_gray);
+  --text_default: var(--white);
+  --table_foreground: var(--gray);
+  --table_background: var(--white);
+  --list_lastchild_highlighted: var(--dark_red);
+  --main_background_first: var(--pale_magenta);
+  --main_background_second: var(--dark_pastel_blue);
+  --main_background_second_highlighted: var(--dark_pastel_blue_alpha20);
+}
+ul,
+ol {
+  padding: 0;
+}
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  border: none;
+  outline: none;
+}
+::selection {
+  background: var(--main_background_second_highlighted);
+}
+::-webkit-scrollbar {
+  width: 12px;
+  height: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 20px;
+  border: 3px solid white;
+}
+::-webkit-scrollbar-thumb:active {
+  background: #a5a5a5;
+}
